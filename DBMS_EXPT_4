@@ -20,26 +20,30 @@ VALUES
 
 -- Queries using different clauses:
 
--- LIKE clause
+-- LIKE clause: Find books with "The" in the title
 SELECT * FROM Books
 WHERE Title LIKE '%The%';
 
--- AND clause
+-- AND clause: Find books published after 1900 and priced above $10
 SELECT * FROM Books
 WHERE PublicationYear > 1900 AND Price > 10;
 
--- BETWEEN clause
+-- BETWEEN clause: Find books published between 1900 and 1950
 SELECT * FROM Books
 WHERE PublicationYear BETWEEN 1900 AND 1950;
 
--- NOT BETWEEN clause
+-- NOT BETWEEN clause: Find books published outside 1800-1900
 SELECT * FROM Books
 WHERE PublicationYear NOT BETWEEN 1800 AND 1900;
 
--- IN clause
+-- IN clause: Find books by George Orwell or Harper Lee
 SELECT * FROM Books
 WHERE Author IN ('George Orwell', 'Harper Lee');
 
--- NOT clause
+-- NOT LIKE clause: Find books whose author is not J.D. Salinger
 SELECT * FROM Books
 WHERE Author NOT LIKE 'J.D. Salinger';
+
+-- NOT IN clause: Find books whose author is neither 'George Orwell' nor 'Harper Lee'
+SELECT * FROM Books
+WHERE Author NOT IN ('George Orwell', 'Harper Lee');
