@@ -1,0 +1,309 @@
+Create table Student 
+Attributes : ID , Name ,Age , Branch ,Fees Paid
+
+Find out : 
+Total umber of students i.e total count 
+No of students admitted in CSBS Branch 
+Total fees paid by student 
+Min and Max Fees paid by student 
+Average fees paid by student 
+
+
+ChatGPT said:
+Here is the SQL code to create the Student table and perform the required queries:
+
+Creating the Student Table
+sql
+Copy
+Edit
+CREATE TABLE Student (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT,
+    Branch VARCHAR(50),
+    Fees_Paid DECIMAL(10,2)
+);
+Queries to Find Required Information
+Total number of students (total count)
+
+sql
+Copy
+Edit
+SELECT COUNT(*) AS Total_Students FROM Student;
+Number of students admitted in the CSBS Branch
+
+sql
+Copy
+Edit
+SELECT COUNT(*) AS CSBS_Students FROM Student WHERE Branch = 'CSBS';
+Total fees paid by students
+
+sql
+Copy
+Edit
+SELECT SUM(Fees_Paid) AS Total_Fees_Paid FROM Student;
+Minimum and Maximum fees paid by a student
+
+sql
+Copy
+Edit
+SELECT MIN(Fees_Paid) AS Min_Fees, MAX(Fees_Paid) AS Max_Fees FROM Student;
+Average fees paid by students
+
+sql
+Copy
+Edit
+SELECT AVG(Fees_Paid) AS Average_Fees FROM Student;
+Let me know if you need any modifications! 🚀
+
+
+
+
+
+
+You said:
+Aim is Apply Aggregate functions (Count , Average Minimum , Maximum ,Sum)
+Give in a assignment like i have a practical for it
+
+
+ChatGPT said:
+Here’s a structured SQL Practical Assignment for you:
+
+SQL Practical Assignment
+Title: Applying Aggregate Functions (COUNT, AVG, MIN, MAX, SUM) in SQL
+Objective:
+To understand and apply aggregate functions such as COUNT, SUM, MIN, MAX, and AVG in SQL to analyze student data.
+
+Task 1: Create the Student Table
+Write an SQL query to create a table named Student with the following attributes:
+
+Column Name	Data Type	Description
+ID	INT (Primary Key)	Unique Student ID
+Name	VARCHAR(100)	Student’s Name
+Age	INT	Student’s Age
+Branch	VARCHAR(50)	Student’s Branch
+Fees_Paid	DECIMAL(10,2)	Fees Paid by the Student
+SQL Query to Create Table:
+sql
+Copy
+Edit
+CREATE TABLE Student (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT,
+    Branch VARCHAR(50),
+    Fees_Paid DECIMAL(10,2)
+);
+Task 2: Insert Sample Data
+Insert at least 5 records into the Student table for testing.
+
+sql
+Copy
+Edit
+INSERT INTO Student (ID, Name, Age, Branch, Fees_Paid) VALUES
+(1, 'Alice', 20, 'CSBS', 50000.00),
+(2, 'Bob', 21, 'IT', 45000.00),
+(3, 'Charlie', 22, 'CSBS', 48000.00),
+(4, 'David', 23, 'ECE', 52000.00),
+(5, 'Emma', 20, 'CSBS', 53000.00);
+Task 3: Apply Aggregate Functions
+Find the total number of students.
+
+sql
+Copy
+Edit
+SELECT COUNT(*) AS Total_Students FROM Student;
+Find the number of students admitted in the CSBS branch.
+
+sql
+Copy
+Edit
+SELECT COUNT(*) AS CSBS_Students FROM Student WHERE Branch = 'CSBS';
+Find the total fees paid by all students.
+
+sql
+Copy
+Edit
+SELECT SUM(Fees_Paid) AS Total_Fees_Paid FROM Student;
+Find the minimum and maximum fees paid by students.
+
+sql
+Copy
+Edit
+SELECT MIN(Fees_Paid) AS Min_Fees, MAX(Fees_Paid) AS Max_Fees FROM Student;
+Find the average fees paid by students.
+
+sql
+Copy
+Edit
+SELECT AVG(Fees_Paid) AS Average_Fees FROM Student;
+Task 4: Observe and Analyze
+Execute the above queries and note down the output.
+
+Observe how aggregate functions help in summarizing data.
+
+Try adding more student records and re-run the queries to see the updated results.
+
+Conclusion:
+This practical exercise helps in understanding how aggregate functions (COUNT, SUM, MIN, MAX, AVG) can be used to analyze and summarize database records.
+
+Would you like me to format this for submission (e.g., add a cover page)? 😊
+
+
+
+
+
+
+You said:
+yes
+
+
+ChatGPT said:
+Here’s your SQL Practical Assignment formatted for submission. You can copy and modify it as needed.
+
+Sql Aggregate Practical
+
+INSTITUTE NAME
+DEPARTMENT NAME
+COURSE NAME
+
+SQL Practical Assignment
+Title: Applying Aggregate Functions (COUNT, AVG, MIN, MAX, SUM) in SQL
+Objective:
+To understand and apply aggregate functions such as COUNT, SUM, MIN, MAX, and AVG in SQL to analyze student data.
+
+Task 1: Create the Student Table
+Write an SQL query to create a table named Student with the following attributes:
+
+Column Name	Data Type	Description
+ID	INT (Primary Key)	Unique Student ID
+Name	VARCHAR(100)	Student’s Name
+Age	INT	Student’s Age
+Branch	VARCHAR(50)	Student’s Branch
+Fees_Paid	DECIMAL(10,2)	Fees Paid by the Student
+SQL Query to Create Table:
+CREATE TABLE Student (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT,
+    Branch VARCHAR(50),
+    Fees_Paid DECIMAL(10,2)
+);
+Task 2: Insert Sample Data
+Insert at least 5 records into the Student table for testing.
+
+INSERT INTO Student (ID, Name, Age, Branch, Fees_Paid) VALUES
+(1, 'Alice', 20, 'CSBS', 50000.00),
+(2, 'Bob', 21, 'IT', 45000.00),
+(3, 'Charlie', 22, 'CSBS', 48000.00),
+(4, 'David', 23, 'ECE', 52000.00),
+(5, 'Emma', 20, 'CSBS', 53000.00);
+Task 3: Apply Aggregate Functions
+Find the total number of students.
+
+SELECT COUNT(*) AS Total_Students FROM Student;
+Find the number of students admitted in the CSBS branch.
+
+SELECT COUNT(*) AS CSBS_Students FROM Student WHERE Branch = 'CSBS';
+Find the total fees paid by all students.
+
+SELECT SUM(Fees_Paid) AS Total_Fees_Paid FROM Student;
+Find the minimum and maximum fees paid by students.
+
+SELECT MIN(Fees_Paid) AS Min_Fees, MAX(Fees_Paid) AS Max_Fees FROM Student;
+Find the average fees paid by students.
+
+SELECT AVG(Fees_Paid) AS Average_Fees FROM Student;
+Task 4: Observe and Analyze
+Execute the above queries and note down the output.
+
+Observe how aggregate functions help in summarizing data.
+
+Try adding more student records and re-run the queries to see the updated results.
+
+Conclusion:
+This practical exercise helps in understanding how aggregate functions (COUNT, SUM, MIN, MAX, AVG) can be used to analyze and summarize database records.
+
+Submitted by:
+Student Name: __________________
+Roll Number: __________________
+Date: __________________
+
+Instructor’s Signature: __________________
+
+
+
+Your SQL practical assignment is now formatted and ready for submission. Let me know if you need any modifications! 😊
+
+
+
+
+
+
+You said:
+Give complete code to execute 
+
+
+ChatGPT said:
+Here's the complete SQL code that you can execute step by step in your database system. This includes creating the table, inserting sample data, and running aggregate function queries.
+
+Step 1: Create the Student Table
+sql
+Copy
+Edit
+CREATE TABLE Student (
+    ID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT,
+    Branch VARCHAR(50),
+    Fees_Paid DECIMAL(10,2)
+);
+Step 2: Insert Sample Data
+sql
+Copy
+Edit
+INSERT INTO Student (ID, Name, Age, Branch, Fees_Paid) VALUES
+(1, 'Alice', 20, 'CSBS', 50000.00),
+(2, 'Bob', 21, 'IT', 45000.00),
+(3, 'Charlie', 22, 'CSBS', 48000.00),
+(4, 'David', 23, 'ECE', 52000.00),
+(5, 'Emma', 20, 'CSBS', 53000.00);
+Step 3: Execute Aggregate Function Queries
+Find the total number of students
+
+sql
+Copy
+Edit
+SELECT COUNT(*) AS Total_Students FROM Student;
+Find the number of students admitted in the CSBS branch
+
+sql
+Copy
+Edit
+SELECT COUNT(*) AS CSBS_Students FROM Student WHERE Branch = 'CSBS';
+Find the total fees paid by all students
+
+sql
+Copy
+Edit
+SELECT SUM(Fees_Paid) AS Total_Fees_Paid FROM Student;
+Find the minimum and maximum fees paid by students
+
+sql
+Copy
+Edit
+SELECT MIN(Fees_Paid) AS Min_Fees, MAX(Fees_Paid) AS Max_Fees FROM Student;
+Find the average fees paid by students
+
+sql
+Copy
+Edit
+SELECT AVG(Fees_Paid) AS Average_Fees FROM Student;
+Execution Steps:
+Copy and paste the SQL code into your SQL execution tool (MySQL, PostgreSQL, SQL Server, or SQLite).
+
+Run each section step by step.
+
+Observe the results in the output.
+
+Let me know if you need any modifications or explanations! 🚀
